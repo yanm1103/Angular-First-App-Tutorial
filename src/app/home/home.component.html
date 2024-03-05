@@ -1,13 +1,13 @@
 <section>
     <form>
         <input type="text" placeholder="Filtrar por cidade">
-        <button class="primary" type="button" (click)="penis(3)">Buscar</button>
-        <small>Você buscou {{this.counter}} vezes</small>
+        <button class="primary" type="button" (click)="null">Buscar</button>
     </form>
 </section>
 <section class="results">
-    <app-housing-location></app-housing-location>
+    <app-housing-location *ngFor="let housing of housingLocationList" [housingLocation]="housing"></app-housing-location>
   </section>
+  
 <section>
     <app-norms></app-norms>
 </section>

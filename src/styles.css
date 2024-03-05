@@ -21,10 +21,8 @@ body {
 [data-theme="dark"] {
   --background-color: rgb(30, 30, 30);
   --text-color: rgb(255, 255, 255);
-  --primary-color: #605DC8;
-  --secondary-color: #8B89E6;
-  --accent-color: #64646b;
-  --shadow-color: #757575;
+  --accent-color: #2d2d36;
+  --shadow-color: #605DC8;
 }
 
 button.primary {
