@@ -1,0 +1,14 @@
+<section class="listing">
+  <img class="listing-photo" [src]="housingLocation.photo" alt="Exterior photo of {{housingLocation.name}}">
+  <h2 class="listing-heading">{{ housingLocation.name }}</h2>
+  <h3>{{ housingLocation.city}}, {{housingLocation.state }}</h3>
+  <div style="display: flex; flex-direction: column; align-items: flex-end; margin: 1.25rem">
+    <div>
+      Possui Wi-Fi? <span style="margin-left: 10px">{{ housingLocation.wifi ? 'Sim' : 'Não' }}</span>
+    </div>
+    <div>
+      Possui lavanderia? <span style="margin-left: 10px">{{ housingLocation.laundry ? 'Sim' : 'Não' }}</span>
+    </div>
+    <button mat-raised-button color="primary">Invocar</button>
+  </div>
+</section>

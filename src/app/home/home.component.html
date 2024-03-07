@@ -1,13 +1,17 @@
 <section>
     <form>
-        <input type="text" placeholder="Filtrar por cidade">
-        <button class="primary" type="button" (click)="null">Buscar</button>
+        <mat-form-field>
+            <mat-label>Filtrar por cidade</mat-label>
+            <input matInput type="text">
+        </mat-form-field>
+        <button mat-flat-button type="button" (click)="this.housingService.getHousingLocationById(1)">Buscar</button>
     </form>
 </section>
 <section class="results">
-    <app-housing-location *ngFor="let housing of housingLocationList" [housingLocation]="housing"></app-housing-location>
-  </section>
-  
+    <app-housing-location *ngFor="let housing of housingLocationList"
+        [housingLocation]="housing"></app-housing-location>
+</section>
+
 <section>
     <app-norms></app-norms>
 </section>
