@@ -1,0 +1,19 @@
+<main>
+  <mat-toolbar color="primary">
+    <a [routerLink]="['/']" routerLinkActive="active">
+      <img class="brand-logo" src="/assets/logo.svg" alt="logo">
+    </a>
+    <span class="flex-spacer"></span>
+    <button mat-icon-button>
+      <mat-icon aria-label="Toggle theme" fontIcon="dark_mode"></mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="content">
+    <mat-sidenav #sidenav mode="side" opened="false">
+      </mat-sidenav>
+    <section class="main-content">
+      <router-outlet></router-outlet>
+    </section>
+  </mat-sidenav-container>
+</main>

@@ -1,14 +1,20 @@
-<section class="listing">
-  <img class="listing-photo" [src]="housingLocation.photo" alt="Exterior photo of {{housingLocation.name}}">
-  <h2 class="listing-heading">{{ housingLocation.name }}</h2>
-  <h3>{{ housingLocation.city}}, {{housingLocation.state }}</h3>
-  <div style="display: flex; flex-direction: column; align-items: flex-end; margin: 1.25rem">
-    <div>
-      Possui Wi-Fi? <span style="margin-left: 10px">{{ housingLocation.wifi ? 'Sim' : 'Não' }}</span>
-    </div>
-    <div>
-      Possui lavanderia? <span style="margin-left: 10px">{{ housingLocation.laundry ? 'Sim' : 'Não' }}</span>
-    </div>
-    <button mat-raised-button color="primary">Invocar</button>
-  </div>
-</section>
+<mat-card>
+  <mat-card-header [routerLink]="['/details', housingLocation.id]" class="cursor-pointer">
+    <mat-card-title>{{ housingLocation.name }}</mat-card-title>
+    <mat-card-subtitle>{{ housingLocation.city}}, {{housingLocation.state }}</mat-card-subtitle>
+  </mat-card-header>
+  <img class="listing-photo cursor-pointer" [src]="housingLocation.photo" alt="Exterior photo of {{housingLocation.name}}"  [routerLink]="['/details', housingLocation.id]">
+  <mat-card-content align="end">
+    <p>
+      Possui Wi-Fi? {{ housingLocation.wifi ? 'Sim' : 'Não' }} <br>
+      Possui lavanderia? {{ housingLocation.laundry ? 'Sim' : 'Não' }}
+    </p>
+  </mat-card-content>
+  <mat-divider></mat-divider>
+  <mat-card-actions align="end">
+    <button [routerLink]="['/details', housingLocation.id]" mat-raised-button color="primary">
+      <mat-icon fontIcon="pageview"></mat-icon>
+      Mais detalhes
+    </button>
+  </mat-card-actions>
+</mat-card>

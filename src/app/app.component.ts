@@ -1,23 +1,19 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, HomeComponent],
-  template: `
-  <main>
-    <header class="brand-name">
-      <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">
-    </header>
-    <section class="content">
-      <app-home></app-home>
-    </section>
-  </main>
-  `,
+  imports: [CommonModule, HomeComponent, MatIconModule, RouterModule, MatToolbarModule, MatSidenavModule, MatButtonModule],
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'pingas';
+  title = 'homes title';
 }
