@@ -1,15 +1,45 @@
 <article>
-  <img class="listing-photo" [src]="housingLocation?.photo" alt="Exterior photo of {{housingLocation?.name}}" />
-  <section class="listing-description">
-    <h2 class="listing-heading">{{housingLocation?.name}}</h2>
-    <p class="listing-location">{{housingLocation?.city}}, {{housingLocation?.state}}</p>
-  </section>
-  <section class="listing-features">
-    <h2 class="section-heading">About this housing location</h2>
-    <ul>
-      <li>Units available: {{housingLocation?.availableUnits}}</li>
-      <li>Does this location have wifi: {{housingLocation?.wifi}}</li>
-      <li>Does this location have laundry: {{housingLocation?.laundry}}</li>
-    </ul>
-  </section>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{housingLocation?.name}}</mat-card-title>
+      <mat-card-subtitle>
+        <mat-icon fontIcon="location_on" color="warn"></mat-icon>
+        {{housingLocation?.city}}, {{housingLocation?.state}}
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <img class="listing-photo" [src]="housingLocation?.photo" alt="Exterior photo of {{housingLocation?.name}}" />
+    <mat-card-content>
+      <p class="mat-headline-6">Sobre {{housingLocation?.name}}</p>
+      <ul>
+        <li>Unidades disponíveis: {{housingLocation?.availableUnits}}</li>
+        <li>Tem Wifi? {{housingLocation?.wifi ? 'Sim' : 'Não'}}</li>
+        <li>Tem lavanderia? {{housingLocation?.laundry ? 'Sim' : 'Não'}}</li>
+      </ul>
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <h2>Entre em contato com o vendedor</h2>
+      <form [formGroup]="applyForm" (submit)="submitApplication()">
+        <mat-form-field>
+          <mat-label for="first-name">Nome</mat-label>
+          <input matInput id="first-name" type="text" formControlName="firstName">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label for="last-name">Sobrenom</mat-label>
+          <input matInput id="last-name" type="text" formControlName="lastName">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label for="email">Email</mat-label>
+          <input matInput id="email" type="email" formControlName="email">
+        </mat-form-field>
+        <button mat-raised-button type="submit" color="primary" [disabled]="submittingApplication">
+          <mat-icon fontIcon="send"></mat-icon>
+          Enviar solicitação
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
 </article>

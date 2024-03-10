@@ -9,7 +9,7 @@ export class HousingService {
   housingLocationList: HousingLocation[] = [
     {
       id: 0,
-      name: 'Acme Fresh Start Housing',
+      name: 'Acme Novo Começo Casa',
       city: 'São Paulo',
       state: 'SP',
       photo: `${this.baseUrl}/bernard-hermant-CLKGGwIBTaY-unsplash.jpg`,
@@ -19,9 +19,9 @@ export class HousingService {
     },
     {
       id: 1,
-      name: 'A113 Transitional Housing',
-      city: 'Santa Monica',
-      state: 'CA',
+      name: 'Casa 140',
+      city: 'Campo Grande',
+      state: 'MS',
       photo: `${this.baseUrl}/brandon-griggs-wR11KBaB86U-unsplash.jpg`,
       availableUnits: 0,
       wifi: false,
@@ -29,9 +29,9 @@ export class HousingService {
     },
     {
       id: 2,
-      name: 'Warm Beds Housing Support',
-      city: 'Juneau',
-      state: 'AK',
+      name: 'Lar doce lar de desenhista',
+      city: 'Goiania',
+      state: 'GO',
       photo: `${this.baseUrl}/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg`,
       availableUnits: 1,
       wifi: false,
@@ -39,7 +39,7 @@ export class HousingService {
     },
     {
       id: 3,
-      name: 'Homesteady Housing',
+      name: 'Casa PAULISTA MEO',
       city: 'São Paulo',
       state: 'SP',
       photo: `${this.baseUrl}/ian-macdonald-W8z6aiwfi1E-unsplash.jpg`,
@@ -49,9 +49,9 @@ export class HousingService {
     },
     {
       id: 4,
-      name: 'Happy Homes Group',
-      city: 'Gary',
-      state: 'IN',
+      name: 'Casa torta',
+      city: 'Carbonita',
+      state: 'MG',
       photo: `${this.baseUrl}/krzysztof-hepner-978RAXoXnH4-unsplash.jpg`,
       availableUnits: 1,
       wifi: true,
@@ -59,9 +59,9 @@ export class HousingService {
     },
     {
       id: 5,
-      name: 'Hopeful Apartment Group',
-      city: 'Oakland',
-      state: 'CA',
+      name: 'Esperança Apartamentos',
+      city: 'Mauá',
+      state: 'SP',
       photo: `${this.baseUrl}/r-architecture-JvQ0Q5IkeMM-unsplash.jpg`,
       availableUnits: 2,
       wifi: true,
@@ -69,9 +69,9 @@ export class HousingService {
     },
     {
       id: 6,
-      name: 'Seriously Safe Towns',
-      city: 'Oakland',
-      state: 'CA',
+      name: 'Cidade sériamente segura',
+      city: 'Morro do mico-leão-prateado da bunda branca',
+      state: 'RJ',
       photo: `${this.baseUrl}/phil-hearing-IYfp2Ixe9nM-unsplash.jpg`,
       availableUnits: 5,
       wifi: true,
@@ -79,31 +79,11 @@ export class HousingService {
     },
     {
       id: 7,
-      name: 'Hopeful Housing Solutions',
-      city: 'Oakland',
-      state: 'CA',
+      name: 'Casa, Casa, Casa...',
+      city: 'Ribeirão Preto',
+      state: 'SP',
       photo: `${this.baseUrl}/r-architecture-GGupkreKwxA-unsplash.jpg`,
       availableUnits: 2,
-      wifi: true,
-      laundry: true
-    },
-    {
-      id: 8,
-      name: 'Seriously Safe Towns',
-      city: 'Oakland',
-      state: 'CA',
-      photo: `${this.baseUrl}/saru-robert-9rP3mxf8qWI-unsplash.jpg`,
-      availableUnits: 10,
-      wifi: false,
-      laundry: false
-    },
-    {
-      id: 9,
-      name: 'Capital Safe Towns',
-      city: 'Portland',
-      state: 'OR',
-      photo: `${this.baseUrl}/webaliser-_TPTXZd9mOo-unsplash.jpg`,
-      availableUnits: 6,
       wifi: true,
       laundry: true
     }
@@ -115,4 +95,9 @@ export class HousingService {
     return this.housingLocationList.find(house => house.id === id);
   }
   constructor() { }
+
+  submitApplication(firstName: string, lastName: string, email: string) :boolean {
+    console.log(`Cadastro recebido! Nome: ${firstName} ${lastName}. Email: ${email}`)
+    return true;
+  }
 }
