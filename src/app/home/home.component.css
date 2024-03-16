@@ -18,3 +18,36 @@
         grid-template-columns: 1fr;
     }    
   }
+
+  #search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #search button {
+    border-radius: 30px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    padding: 22px;
+  }
+
+  .searchbarcontainer {
+    display: flex;
+    padding: 10px;
+    background-color: var(--mat-tree-container-background-color);
+    border-radius: 30px;
+    max-width: 80vw;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .searchbarcontainer input {
+    margin-left: 15px;
+    color: var(--mat-toolbar-container-text-color);
+    background: none;
+    border: none;
+    min-width: 30vw;
+  }
+  .searchbarcontainer input:focus {
+    outline: none;
+  }

@@ -3,12 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { HousingService } from '../housing.service';
 import { HousingLocation } from '../housinglocation';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
-import { MatDivider } from '@angular/material/divider';
-import {MatIconModule} from '@angular/material/icon';
-import { MatCardModule } from '@angular/material/card';
+import { MaterialModule } from '../material/material.module';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
@@ -17,12 +12,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatIconModule,
-    MatCardModule,
-    MatDivider
+    MaterialModule
   ],
   templateUrl: './details.component.html',
   styleUrl: './details.component.css'

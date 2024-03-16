@@ -1,12 +1,13 @@
 <main>
   <mat-toolbar color="primary">
-    <a [routerLink]="['/']" routerLinkActive="active">
-      <img class="brand-logo" src="/assets/logo.svg" alt="logo">
-    </a>
-    <span class="flex-spacer"></span>
-    <button mat-icon-button>
+    <div class="logo">
+      <a [routerLink]="['/']" routerLinkActive="active">
+        <img class="brand-logo" src="/assets/logo.svg" alt="logo">
+      </a>
+    </div>
+    <!-- <button mat-icon-button>
       <mat-icon aria-label="Toggle theme" fontIcon="dark_mode"></mat-icon>
-    </button>
+    </button> -->
   </mat-toolbar>
 
   <mat-sidenav-container class="content">

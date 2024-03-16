@@ -1,8 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MatButtonModule} from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MaterialModule } from '../material/material.module';
 
 // Components
 import { HousingLocationComponent } from '../housing-location/housing-location.component';
@@ -19,9 +17,7 @@ import { HousingService } from '../housing.service';
     HousingLocationComponent,
     NormsComponent,
     CommonModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule
+    MaterialModule
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
@@ -32,8 +28,32 @@ export class HomeComponent {
 
   housingService: HousingService = inject(HousingService);
 
+  filteredLocationList: HousingLocation[] = [];
+
   constructor() {
     this.housingLocationList = this.housingService.getAllHousingLocations();
+    this.filteredLocationList = this.housingLocationList;
+  }
+
+  // When searching for a city.
+  filterResults(text: string) {
+    if (!text) {
+      this.filteredLocationList = this.housingLocationList;
+      return;
+    } else {
+      this.filteredLocationList = this.housingLocationList.filter(
+        housingLocation => housingLocation?.city.toLowerCase().includes(text.toLowerCase())
+      )
+      return;
+    }
+  }
+
+  // Prevents page reload if enter is pressed inside the filter input
+  handleEnter(event: KeyboardEvent, text: string) {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      this.filterResults(text);
+    }
   }
 
 }

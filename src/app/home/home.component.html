@@ -1,14 +1,15 @@
 <section>
-    <form>
-        <mat-form-field>
-            <mat-label>Filtrar por cidade</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-        <button mat-flat-button type="button" (click)="this.housingService.getHousingLocationById(1)">Buscar</button>
+    <form id="search">
+        <label for="searchbar" class="searchbarcontainer">
+            <mat-icon fontIcon="search"></mat-icon>
+            <input id="searchbar" type="text" placeholder="Procurar por locais" #filter
+                (keydown)="handleEnter($event, filter.value)">
+        </label>
+        <button color="accent" mat-flat-button type="button" (click)="filterResults(filter.value)">Buscar</button>
     </form>
 </section>
 <section class="results">
-    <app-housing-location *ngFor="let housing of housingLocationList"
+    <app-housing-location *ngFor="let housing of filteredLocationList"
         [housingLocation]="housing"></app-housing-location>
 </section>
 
