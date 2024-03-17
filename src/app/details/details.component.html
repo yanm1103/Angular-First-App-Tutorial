@@ -8,38 +8,57 @@
       </mat-card-subtitle>
     </mat-card-header>
     <mat-divider></mat-divider>
-    <img class="listing-photo" [src]="housingLocation?.photo" alt="Exterior photo of {{housingLocation?.name}}" />
-    <mat-card-content>
-      <p class="mat-headline-6">Sobre {{housingLocation?.name}}</p>
-      <ul>
-        <li>Unidades disponíveis: {{housingLocation?.availableUnits}}</li>
-        <li>Tem Wifi? {{housingLocation?.wifi ? 'Sim' : 'Não'}}</li>
-        <li>Tem lavanderia? {{housingLocation?.laundry ? 'Sim' : 'Não'}}</li>
-      </ul>
-    </mat-card-content>
-    <mat-divider></mat-divider>
-    <mat-card-content>
-      <h2>Entre em contato com o vendedor</h2>
-      <form [formGroup]="applyForm" (submit)="submitApplication()">
-        <mat-form-field>
-          <mat-label for="first-name">Nome</mat-label>
-          <input matInput id="first-name" type="text" formControlName="firstName">
-        </mat-form-field>
-
-        <mat-form-field>
-          <mat-label for="last-name">Sobrenome</mat-label>
-          <input matInput id="last-name" type="text" formControlName="lastName">
-        </mat-form-field>
-
-        <mat-form-field>
-          <mat-label for="email">Email</mat-label>
-          <input matInput id="email" type="email" formControlName="email">
-        </mat-form-field>
-        <button mat-raised-button type="submit" color="primary" [disabled]="submittingApplication">
-          <mat-icon fontIcon="send"></mat-icon>
-          Enviar solicitação
-        </button>
-      </form>
-    </mat-card-content>
+    <div class="images">
+      <a [href]="housingLocation?.photo" target="_blank">
+        <img matTooltip="Clique na imagem para ver em tamanho real (nova aba)"
+          [matTooltipPositionAtOrigin]="enabled.value" class="listing-photo" [src]="housingLocation?.photo"
+          alt="Exterior photo of {{housingLocation?.name}}" />
+      </a>
+    </div>
   </mat-card>
+  <div class="details">
+    <mat-card style="max-width: 800px">
+      <mat-card-content>
+        <p class="mat-headline-6">Sobre {{housingLocation?.name}}</p>
+        <ul>
+          <li>Unidades disponíveis: {{housingLocation?.availableUnits}}</li>
+          <li>Tem Wifi? {{housingLocation?.wifi ? 'Sim' : 'Não'}}</li>
+          <li>Tem lavanderia? {{housingLocation?.laundry ? 'Sim' : 'Não'}}</li>
+        </ul>
+        <br>
+        <p class="mat-headline-6">Descrição pelo vendedor</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae tempor libero. Nulla facilisi.
+          Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec sit amet
+          ultrices tellus. In mollis diam ut elit molestie, in mattis elit auctor. Donec ut purus sed ligula maximus
+          pharetra. Integer in nibh at purus sollicitudin interdum. Integer ultricies, purus sed luctus ornare, tortor
+          lacus tincidunt risus, in consectetur leo diam a purus. Nulla finibus posuere massa, ut hendrerit est. Sed
+          condimentum urna non eros auctor, eu porta est hendrerit.</p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="contact">
+      <mat-card-content>
+        <h2>Entre em contato com o vendedor</h2>
+        <form [formGroup]="applyForm" (submit)="submitApplication()">
+          <mat-form-field>
+            <mat-label for="first-name">Nome</mat-label>
+            <input matInput id="first-name" type="text" formControlName="firstName">
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label for="last-name">Sobrenome</mat-label>
+            <input matInput id="last-name" type="text" formControlName="lastName">
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label for="email">Email</mat-label>
+            <input matInput id="email" type="email" formControlName="email">
+          </mat-form-field>
+          <button class="send" mat-raised-button type="submit" color="primary" [disabled]="submittingApplication">
+            <mat-icon fontIcon="send"></mat-icon>
+            Enviar solicitação
+          </button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </article>

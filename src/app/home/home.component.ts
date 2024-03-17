@@ -5,7 +5,6 @@ import { MaterialModule } from '../material/material.module';
 // Components
 import { HousingLocationComponent } from '../housing-location/housing-location.component';
 import { HousingLocation } from '../housinglocation';
-import { NormsComponent } from '../norms/norms.component';
 
 // Services
 import { HousingService } from '../housing.service';
@@ -15,7 +14,6 @@ import { HousingService } from '../housing.service';
   standalone: true,
   imports: [
     HousingLocationComponent,
-    NormsComponent,
     CommonModule,
     MaterialModule
   ],

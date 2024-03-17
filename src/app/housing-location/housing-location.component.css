@@ -4,3 +4,36 @@
   object-fit: cover;
   margin: 1em 0px;
 }
+
+mat-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+mat-card-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.price {
+  font-size: 1.3rem;
+  margin-bottom: 0px;
+  color: #00c51e;
+}
+
+.review {
+  display: flex;
+  margin-right: 10px;
+  justify-content: end;
+  align-items: center;
+}
+.review-icon {
+  transform: scale(0.6);
+}

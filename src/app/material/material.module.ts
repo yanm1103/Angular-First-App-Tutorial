@@ -8,10 +8,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [],
-  imports: [ CommonModule, MatFormFieldModule, MatInputModule, MatSidenavModule, MatIconModule, MatButtonModule, MatToolbarModule, MatCardModule, MatDividerModule ],
-  exports: [ MatFormFieldModule, MatInputModule, MatSidenavModule, MatIconModule, MatButtonModule, MatToolbarModule, MatCardModule, MatDividerModule ]
+  imports: [ CommonModule, MatFormFieldModule, MatTooltipModule, MatInputModule, MatSidenavModule, MatIconModule, MatButtonModule, MatToolbarModule, MatCardModule, MatDividerModule ],
+  exports: [ MatFormFieldModule, MatTooltipModule, MatInputModule, MatSidenavModule, MatIconModule, MatButtonModule, MatToolbarModule, MatCardModule, MatDividerModule ]
 })
 export class MaterialModule { }

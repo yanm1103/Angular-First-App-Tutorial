@@ -11,3 +11,16 @@ mat-toolbar {
   justify-content: center;
   align-items: center;
 }
+
+footer {
+  padding: 30px;
+  padding-bottom: 5px;
+  background-color:black;
+  color: white;
+}
+.footerlogo {
+  width: fit-content;
+  cursor: pointer;
+  display: flex;
+  align-content: center;
+}

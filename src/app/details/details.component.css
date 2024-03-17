@@ -25,3 +25,37 @@ form {
   flex-direction: column;
   align-items: flex-start;
 }
+
+.images {
+  overflow-x: scroll;
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+  margin: 10px 10px;
+}
+
+.contact {
+  margin-left: 10px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.send {
+  width: 100%;
+}
+
+@media (max-width: 400px) {
+  .details {
+    display: block;
+    margin: 10px 0px;
+  }
+
+  .contact {
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+}

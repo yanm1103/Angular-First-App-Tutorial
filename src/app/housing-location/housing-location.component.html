@@ -1,9 +1,17 @@
 <mat-card>
   <mat-card-header [routerLink]="['/details', housingLocation.id]" class="cursor-pointer">
-    <mat-card-title>{{ housingLocation.name }}</mat-card-title>
-    <mat-card-subtitle>{{ housingLocation.city}}, {{housingLocation.state }}</mat-card-subtitle>
+    <div class="title">
+      <mat-card-title>{{ housingLocation.name }}</mat-card-title>
+      <div class="review">
+        <mat-icon class="review-icon" fontIcon="star"></mat-icon> {{housingLocation.review}}
+      </div>
+    </div>
+    <div>
+      <mat-card-subtitle>{{ housingLocation.city}}, {{housingLocation.state }}</mat-card-subtitle>
+    </div>
   </mat-card-header>
-  <img class="listing-photo cursor-pointer" [src]="housingLocation.photo" alt="Exterior photo of {{housingLocation.name}}"  [routerLink]="['/details', housingLocation.id]">
+  <img class="listing-photo cursor-pointer" [src]="housingLocation.photo"
+    alt="Exterior photo of {{housingLocation.name}}" [routerLink]="['/details', housingLocation.id]">
   <mat-card-content align="end">
     <p>
       Possui Wi-Fi? {{ housingLocation.wifi ? 'Sim' : 'Não' }} <br>
@@ -11,10 +19,15 @@
     </p>
   </mat-card-content>
   <mat-divider></mat-divider>
-  <mat-card-actions align="end">
-    <button [routerLink]="['/details', housingLocation.id]" mat-raised-button color="primary">
-      <mat-icon fontIcon="pageview"></mat-icon>
-      Mais detalhes
-    </button>
+  <mat-card-actions>
+    <div>
+      <p class="price"><strong>R$ {{housingLocation.price}}</strong> / mês</p>
+    </div>
+    <div>
+      <button [routerLink]="['/details', housingLocation.id]" mat-raised-button color="primary">
+        <mat-icon fontIcon="pageview"></mat-icon>
+        Mais detalhes
+      </button>
+    </div>
   </mat-card-actions>
 </mat-card>

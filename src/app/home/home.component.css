@@ -4,6 +4,7 @@
     row-gap: 14px;
     grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
     margin-top: 50px;
+    margin-bottom: 30px;
     justify-content: space-around;
   }
 

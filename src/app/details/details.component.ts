@@ -30,6 +30,8 @@ export class DetailsComponent {
     email: new FormControl('')
   });
 
+  enabled = new FormControl(false);
+
   submittingApplication:boolean = false;
 
   constructor() {

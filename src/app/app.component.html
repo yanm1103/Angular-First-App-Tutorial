@@ -2,7 +2,7 @@
   <mat-toolbar color="primary">
     <div class="logo">
       <a [routerLink]="['/']" routerLinkActive="active">
-        <img class="brand-logo" src="/assets/logo.svg" alt="logo">
+        <img matTooltip="Página inicial" class="brand-logo" src="/assets/logo.svg" alt="logo">
       </a>
     </div>
     <!-- <button mat-icon-button>
@@ -16,4 +16,13 @@
   <section class="main-content">
     <router-outlet></router-outlet>
   </section>
+
+  <mat-divider></mat-divider>
+  <footer>
+    <div matTooltip="Voltar à tela inicial" [routerLink]="['/']" routerLinkActive="active" class="footerlogo">
+      <img height="20px" src="./assets/favicon.png"><p>Homes - Sua nova casa está aqui</p>
+    </div>
+    <br>
+    <p>Desenvolvido por <a href="https://www.linkedin.com/in/yanmoura/">Yan Moura Virginio</a> - 2024<br>© Nenhum direito reservado</p>
+  </footer>
 </main>
