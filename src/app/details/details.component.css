@@ -8,6 +8,29 @@
   content: url('/assets/location-pin.svg') / '';
 }
 
+mat-card-header {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+@media (min-width: 1281px) {
+  .maincard {
+    padding: 0 10vw;
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title p {
+  margin-bottom: 0px;
+  color: #00c51e;
+}
+
 h2 {
   margin: 15px 0;
 }

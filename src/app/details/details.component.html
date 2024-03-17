@@ -1,21 +1,28 @@
 <article>
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>{{housingLocation?.name}}</mat-card-title>
-      <mat-card-subtitle>
-        <mat-icon fontIcon="location_on" color="warn"></mat-icon>
-        {{housingLocation?.city}}, {{housingLocation?.state}}
-      </mat-card-subtitle>
-    </mat-card-header>
-    <mat-divider></mat-divider>
-    <div class="images">
-      <a [href]="housingLocation?.photo" target="_blank">
-        <img matTooltip="Clique na imagem para ver em tamanho real (nova aba)"
-          [matTooltipPositionAtOrigin]="enabled.value" class="listing-photo" [src]="housingLocation?.photo"
-          alt="Exterior photo of {{housingLocation?.name}}" />
-      </a>
-    </div>
-  </mat-card>
+  <div class="maincard">
+    <mat-card>
+      <mat-card-header>
+        <div class="title">
+          <mat-card-title>{{housingLocation?.name}}</mat-card-title>
+          <p class="mat-headline-4">R$ {{housingLocation?.price}} por mês</p>
+        </div>
+        <div>
+          <mat-card-subtitle>
+            <mat-icon fontIcon="location_on" color="warn"></mat-icon>
+            {{housingLocation?.city}}, {{housingLocation?.state}}
+          </mat-card-subtitle>
+        </div>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <div class="images">
+        <a [href]="housingLocation?.photo" target="_blank">
+          <img matTooltip="Clique na imagem para ver em tamanho real (nova aba)"
+            [matTooltipPositionAtOrigin]="enabled.value" class="listing-photo" [src]="housingLocation?.photo"
+            alt="Exterior photo of {{housingLocation?.name}}" />
+        </a>
+      </div>
+    </mat-card>
+  </div>
   <div class="details">
     <mat-card style="max-width: 800px">
       <mat-card-content>
@@ -24,6 +31,7 @@
           <li>Unidades disponíveis: {{housingLocation?.availableUnits}}</li>
           <li>Tem Wifi? {{housingLocation?.wifi ? 'Sim' : 'Não'}}</li>
           <li>Tem lavanderia? {{housingLocation?.laundry ? 'Sim' : 'Não'}}</li>
+          <li>Média das avaliações: {{housingLocation?.review}} estrelas</li>
         </ul>
         <br>
         <p class="mat-headline-6">Descrição pelo vendedor</p>
