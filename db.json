@@ -8,6 +8,8 @@
             "photo": "https://angular.io/assets/images/tutorials/faa/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
             "availableUnits": 4,
             "wifi": true,
+            "price": 300,
+            "review": 4.89,
             "laundry": true
         },
         {
@@ -18,6 +20,8 @@
             "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
             "availableUnits": 0,
             "wifi": false,
+            "price": 300,
+            "review": 4.89,
             "laundry": true
         },
         {
@@ -28,6 +32,8 @@
             "photo": "https://angular.io/assets/images/tutorials/faa/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
             "availableUnits": 1,
             "wifi": false,
+            "price": 300,
+            "review": 4.89,
             "laundry": false
         },
         {
@@ -38,6 +44,8 @@
             "photo": "https://angular.io/assets/images/tutorials/faa/ian-macdonald-W8z6aiwfi1E-unsplash.jpg",
             "availableUnits": 1,
             "wifi": true,
+            "price": 300,
+            "review": 4.89,
             "laundry": false
         },
         {
@@ -48,6 +56,8 @@
             "photo": "https://angular.io/assets/images/tutorials/faa/krzysztof-hepner-978RAXoXnH4-unsplash.jpg",
             "availableUnits": 1,
             "wifi": true,
+            "price": 300,
+            "review": 4.89,
             "laundry": false
         },
         {
@@ -58,6 +68,8 @@
             "photo": "https://angular.io/assets/images/tutorials/faa/r-architecture-JvQ0Q5IkeMM-unsplash.jpg",
             "availableUnits": 2,
             "wifi": true,
+            "price": 300,
+            "review": 4.89,
             "laundry": true
         },
         {
@@ -68,6 +80,8 @@
             "photo": "https://angular.io/assets/images/tutorials/faa/phil-hearing-IYfp2Ixe9nM-unsplash.jpg",
             "availableUnits": 5,
             "wifi": true,
+            "price": 300,
+            "review": 4.89,
             "laundry": true
         },
         {
@@ -78,7 +92,8 @@
             "photo": "https://angular.io/assets/images/tutorials/faa/r-architecture-GGupkreKwxA-unsplash.jpg",
             "availableUnits": 2,
             "wifi": true,
-            "laundry": true
+            "laundry": true,
+            "price": 300
         },
         {
             "id": 8,
@@ -88,6 +103,8 @@
             "photo": "https://angular.io/assets/images/tutorials/faa/saru-robert-9rP3mxf8qWI-unsplash.jpg",
             "availableUnits": 10,
             "wifi": false,
+            "price": 300,
+            "review": 4.89,
             "laundry": false
         },
         {
@@ -95,6 +112,8 @@
             "name": "Capital Safe Towns",
             "city": "Portland",
             "state": "OR",
+            "price": 300,
+            "review": 4.89,
             "photo": "https://angular.io/assets/images/tutorials/faa/webaliser-_TPTXZd9mOo-unsplash.jpg",
             "availableUnits": 6,
             "wifi": true,
